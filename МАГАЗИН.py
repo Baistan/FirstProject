@@ -5,7 +5,8 @@ sendgrid_api_key = "SG.Sj_zC224R7-tUL-OI6cOWg.amC8VPCv6X4VNMwt8TtdIyg3gJ66DprdBP
 subject = "Registration"
 sg = sendgrid.SendGridAPIClient(sendgrid_api_key)
 
-def send_email(email,code):
+
+def send_email(email, code):
     body = "my code =" + code
     message = Mail(
         from_email="maximneveraa@gmail.com",
@@ -13,23 +14,19 @@ def send_email(email,code):
         subject=subject,
         plain_text_content=body
     )
-    print(email,code)
+    print(email, code)
     response = sg.send(message)
 
 
-
-
-def registration(username,password,check_password):
+def registration(username, password, check_password):
     global code
     code = "123456"
     if password == check_password:
-        print(username,password,check_password)
-        send_email(username,code)
+        print(username, password, check_password)
+        send_email(username, code)
 
 
-registration("emma.apigrid@gmail.com","123456","123456")
-
-
+registration("emma.apigrid@gmail.com", "123456", "123456")
 
 strings = ['Samsung j5',
            'samsung galaxy',
@@ -54,14 +51,12 @@ strings = ['Samsung j5',
            ]
 
 
-
-
-
 def function1(strings):
     for i in strings:
-       with open("LIST.txt","a") as file1:
-            file1.write(i.lower() + "\n")\
-
+        with open("LIST.txt", "a") as file1:
+            file1.write(i.lower() + "\n") \
+ \
+ \
 function1(strings)
 
 
@@ -82,14 +77,15 @@ def filtration():
                 with open("HardDrives.txt", "a") as file6:
                     file6.write(sentence)
 
+
 filtration()
 
 
-
 def open_file(file_name):
-    with open(file_name,"r") as file7:
+    with open(file_name, "r") as file7:
         var1 = file7.readlines()
     return var1
+
 
 print(open_file(file_name="Phones.txt"))
 
@@ -102,4 +98,3 @@ elif user_input == "videocarts":
     print(open_file("Videorcarts.txt"))
 elif user_input == "hard drives":
     print(open_file("HardDrives.txt"))
-
