@@ -86,15 +86,24 @@ filtration()
 
 
 
-# def open_file(file_name):
-#     with open(filename,"r") as file7:
-#         var = file7.readlines()
-#     return var
-#
-# print(open_file())
-#
-# user_input = input()
-# if user_input == "phones":
-#     open_file("")
-# elif:
-#     open_file()
+def open_file(file_name):
+    with open(file_name,"r") as file7:
+        var1 = file7.readlines()
+    return var1
+
+print(open_file(file_name="Phones.txt"))
+
+user_input = input("Введите наименование товара: ")
+if user_input == "phones":
+    open_file("Phones.txt")
+    print(open_file("Phones.txt"))
+elif user_input == "computers":
+    open_file("Computers.txt")
+    print(open_file("Computers.txt"))
+elif user_input == "videocarts":
+    open_file("Videorcarts.txt")
+    print(open_file("Videorcarts.txt"))
+elif user_input == "hard drives":
+    open_file("HardDrives.txt")
+    print(open_file("HardDrives.txt"))
+
