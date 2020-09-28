@@ -69,16 +69,16 @@ def filtration():
     with open("LIST.txt", "r") as file2:
         var = file2.readlines()
         for sentence in var:
-            if "samsung" or "iphone" in sentence:
+            if "samsung" in sentence or "iphone" in sentence:
                 with open("Phones.txt", "a") as file3:
                     file3.write(sentence)
-            elif "acer" in sentence or "asus" in sentence or "macbook" in sentence:
+            elif "acer" in sentence or "asus" in sentence or "macbook" in sentence or "mac" in sentence:
                 with open("Computers.txt", "a") as file4:
                     file4.write(sentence)
             elif "geforce" in sentence or "amd" in sentence:
                 with open("Videorcarts.txt", "a") as file5:
                     file5.write(sentence)
-            elif "hdd" in sentence or "sdd" in sentence:
+            elif "hdd" in sentence or "ssd" in sentence:
                 with open("HardDrives.txt", "a") as file6:
                     file6.write(sentence)
 
