@@ -1,33 +1,33 @@
-# import sendgrid
-# from sendgrid import Mail
-#
-# sendgrid_api_key = "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"
-# subject = "Registration"
-# sg = sendgrid.SendGridAPIClient(sendgrid_api_key)
-#
-# def send_email(email,code):
-#     body = "my code =" + code
-#     message = Mail(
-#         from_email="maximneveraa@gmail.com",
-#         to_emails=email,
-#         subject=subject,
-#         plain_text_content=body
-#     )
-#     print(email,code)
-#     response = sg.send(message)
-#
-#
-#
-#
-# def registration(username,password,check_password):
-#     global code
-#     code = "123456"
-#     if password == check_password:
-#         print(username,password,check_password)
-#         send_email(username,code)
-#
-#
-# registration("emma.apigrid@gmail.com","123456","123456")
+import sendgrid
+from sendgrid import Mail
+
+sendgrid_api_key = "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"
+subject = "Registration"
+sg = sendgrid.SendGridAPIClient(sendgrid_api_key)
+
+def send_email(email,code):
+    body = "my code =" + code
+    message = Mail(
+        from_email="maximneveraa@gmail.com",
+        to_emails=email,
+        subject=subject,
+        plain_text_content=body
+    )
+    print(email,code)
+    response = sg.send(message)
+
+
+
+
+def registration(username,password,check_password):
+    global code
+    code = "123456"
+    if password == check_password:
+        print(username,password,check_password)
+        send_email(username,code)
+
+
+registration("emma.apigrid@gmail.com","123456","123456")
 
 
 
@@ -95,15 +95,11 @@ print(open_file(file_name="Phones.txt"))
 
 user_input = input("Введите наименование товара: ")
 if user_input == "phones":
-    open_file("Phones.txt")
     print(open_file("Phones.txt"))
 elif user_input == "computers":
-    open_file("Computers.txt")
     print(open_file("Computers.txt"))
 elif user_input == "videocarts":
-    open_file("Videorcarts.txt")
     print(open_file("Videorcarts.txt"))
 elif user_input == "hard drives":
-    open_file("HardDrives.txt")
     print(open_file("HardDrives.txt"))
 
