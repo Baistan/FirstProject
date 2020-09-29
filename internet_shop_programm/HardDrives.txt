@@ -1,0 +1,5 @@
+hdd 1tb
+ssd adata 3100/1400mbs
+hdd 2tb
+ssd kingston 512 gb
+ssd adata 1tb
