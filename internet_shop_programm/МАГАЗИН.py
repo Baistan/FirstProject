@@ -54,9 +54,7 @@ strings = ['Samsung j5',
 def function1(strings):
     for i in strings:
         with open("LIST.txt", "a") as file1:
-            file1.write(i.lower() + "\n") \
- \
- \
+            file1.write(i.lower() + "\n")
 function1(strings)
 
 
